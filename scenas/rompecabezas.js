@@ -38,6 +38,20 @@ class Rompecabezas extends Phaser.Scene {
     const width = this.sys.game.config.width;
     const height = this.sys.game.config.height;
 
+    // Resetear el tiempo cuando se reinicia la escena
+    this.timeRemaining = this.timeLimit;
+    this.gameCompleted = false;
+    this.congratulationsShown = false;
+    this.satellitesConfigured = 0;
+    this.satellites = [];
+    this.satelliteObjectives = [];
+    this.selectedSatellite = null;
+    this.currentSatellite = -1;
+    this.frequency = 2400;
+    this.signalPower = 50;
+    this.interference = 0;
+    this.networkQuality = 0;
+
     // Generar objetivos aleatorios para cada satélite
     this.generateRandomObjectives();
 
