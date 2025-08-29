@@ -541,8 +541,8 @@ class scenaFallos extends Phaser.Scene {
       ease: 'Back.easeOut'
     });
 
-    // Desaparecer después de 3 segundos
-    this.time.delayedCall(3000, () => {
+    // Desaparecer después de 5 segundos
+    this.time.delayedCall(5000, () => {
       this.tweens.add({
         targets: [messagePanel, messageText],
         alpha: 0,
